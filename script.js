@@ -4,19 +4,19 @@
 // In your JavaScript create an array of 24 words and then use a query selector to return all the 12 elements as a NodeList.
 //Finally, use a FOR loop to iterate through the NodeList and insert into the HTML a random word from the array of words
 //Bonus: For your random word selection, ensure that no word is repeated
+var walletArray = ['regular','microphone','deprive','econobox','affair','representative','licence','conservation','reporter','move','grace','tube','meal','corpse','seem','possible','tragedy','satisfaction','prey','available','institution','prisoner','mistreat','divide'];
+//array of words
+var random;
 
-var words = document.getElementsByClassName('wallet');
+var elements = document.getElementsByClassName('wallet');
+//node list of html elements
 
-if (words.length >= 11){
 
-var walletItems = docuent.querySelectorAll('li.wallet');
-if (hotItems.length > 0) {
-  for (var i = 0 i<walletItems.length: i++){
-    walletItems [i].className = 'wallet';
-  }
+//elements.length used as a counter to loop through array as long as the elements in the array.
+for(var i = 0; i < elements.length; i++){
+  random = Math.floor(Math.random() * 24) //assigns a random number each time the for loop runs
+  elements[i].textContent = walletArray[random] //assigns the text content of the respective element to a random index in the words array
 }
-
-
 
 //for (var i = 0; i <walletItems.length; i++){
 //  walletItems[i].className = "wallet"
